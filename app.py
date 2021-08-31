@@ -18,10 +18,10 @@ if navi == 'Home':
     st.write(df.head(10))
 
 if navi == 'Prediction':
-    Headline = st.text_area('News headline goes here')
+    Headline = st.text_area('News Posts goes here')
     if st.button('Make Prediction'):
         if len(Headline) < 15:
-            st.error("Your News Headline is too short...")
+            st.error("Your News Posts is too short...")
         else:
             lowercasedHeadline = Headline.lower()
             prediction = headlinePreprocessor(lowercasedHeadline)
